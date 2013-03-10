@@ -1,0 +1,5 @@
+{
+	"abstract": "an empty module that can only be installed on Windows",
+	"test": "$^O =~ /^(MSWin32|cygwin)$/i",
+	"version": "0.001"
+}

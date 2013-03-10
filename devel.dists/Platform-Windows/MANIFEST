@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/00-compile.t
+t/01-platform.t
+lib/Platform/Windows.pm

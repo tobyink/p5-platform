@@ -1,0 +1,5 @@
+{
+	"abstract": "an empty module that can only be installed on Linux/Unix",
+	"test": "$^O =~ /^(Linux|.*BSD.*|.*UNIX.*|Darwin|Solaris|SunOS|Haiku|Next|dec_osf|svr4|sco_sv|unicos.*|.*x)$/i",
+	"version": "0.001"
+}
