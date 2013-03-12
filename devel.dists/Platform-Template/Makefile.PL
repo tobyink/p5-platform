@@ -9,5 +9,5 @@ WriteMakefile(
 	VERSION_FROM      => '#FILENAME#',
 	PREREQ_PM         => {},
 	BUILD_REQUIRES    => { "Test::More" => "0.80" },
-	($] >= 5.005 ? (ABSTRACT_FROM  => '#FILENAME#', AUTHOR => '#AUTHOR# <#EMAIL#>') : ()),
+	($] >= 5.005 ? (ABSTRACT_FROM  => '#FILENAME#', AUTHOR => '#AUTHOR# <#MAIL#>') : ()),
 );

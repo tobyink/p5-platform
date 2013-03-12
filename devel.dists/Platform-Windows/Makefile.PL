@@ -9,5 +9,5 @@ WriteMakefile(
 	VERSION_FROM      => 'lib/Platform/Windows.pm',
 	PREREQ_PM         => {},
 	BUILD_REQUIRES    => { "Test::More" => "0.80" },
-	($] >= 5.005 ? (ABSTRACT_FROM  => 'lib/Platform/Windows.pm', AUTHOR => 'Toby Inkster <#EMAIL#>') : ()),
+	($] >= 5.005 ? (ABSTRACT_FROM  => 'lib/Platform/Windows.pm', AUTHOR => 'Toby Inkster <tobyink@cpan.org>') : ()),
 );
