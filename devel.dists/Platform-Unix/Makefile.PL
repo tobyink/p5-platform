@@ -2,7 +2,7 @@ use 5;
 use ExtUtils::MakeMaker;
 
 die "Requires Unix!\n"
-	unless ||($^O =~ /^(Linux|.*BSD.*|.*UNIX.*|Darwin|Solaris|SunOS|Haiku|Next|dec_osf|svr4|sco_sv|unicos.*|.*x)$/i);
+	unless $ENV{PERL_PLATFORM_OVERRIDE}||($^O =~ /^(Linux|.*BSD.*|.*UNIX.*|Darwin|Solaris|SunOS|Haiku|Next|dec_osf|svr4|sco_sv|unicos.*|.*x)$/i);
 
 WriteMakefile(
 	NAME              => 'Platform::Unix',

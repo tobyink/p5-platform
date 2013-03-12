@@ -1,2 +1,2 @@
 use Test::More tests => 1;
-ok( ||($^O =~ /^(MSWin32|cygwin)$/i) );
+ok( $ENV{PERL_PLATFORM_OVERRIDE}||($^O =~ /^(MSWin32|cygwin)$/i) );
