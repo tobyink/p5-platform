@@ -2,7 +2,7 @@ use 5;
 use ExtUtils::MakeMaker;
 
 die "Requires Windows!\n"
-	unless $^O =~ /^(MSWin32|cygwin)$/i;
+	unless ||($^O =~ /^(MSWin32|cygwin)$/i);
 
 WriteMakefile(
 	NAME              => 'Platform::Windows',

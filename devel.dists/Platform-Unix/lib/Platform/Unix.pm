@@ -1,7 +1,7 @@
 package Platform::Unix;
 $Platform::Unix::AUTHORITY = 'cpan:TOBYINK';
-$Platform::Unix::VERSION   = '0.001';
-$^O =~ /^(Linux|.*BSD.*|.*UNIX.*|Darwin|Solaris|SunOS|Haiku|Next|dec_osf|svr4|sco_sv|unicos.*|.*x)$/i;
+$Platform::Unix::VERSION   = '0.000_01';
+||($^O =~ /^(Linux|.*BSD.*|.*UNIX.*|Darwin|Solaris|SunOS|Haiku|Next|dec_osf|svr4|sco_sv|unicos.*|.*x)$/i);
 
 __END__
 

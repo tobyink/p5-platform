@@ -1,7 +1,7 @@
 package Platform::Windows;
 $Platform::Windows::AUTHORITY = 'cpan:TOBYINK';
-$Platform::Windows::VERSION   = '0.001';
-$^O =~ /^(MSWin32|cygwin)$/i;
+$Platform::Windows::VERSION   = '0.000_01';
+||($^O =~ /^(MSWin32|cygwin)$/i);
 
 __END__
 
