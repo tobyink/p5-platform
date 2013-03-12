@@ -16,6 +16,9 @@ Platform::Template - #ABSTRACT#
 =head1 DESCRIPTION
 
 This module does nothing, but its installer only works on #PLATFORM#.
+The platform test is:
+
+ #PRETTYTEST#
 
 Adding a dependency on Platform::Template is a way of explicitly
 indicating that your module requires #PLATFORM#.

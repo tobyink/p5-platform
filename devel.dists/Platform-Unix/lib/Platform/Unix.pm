@@ -1,6 +1,6 @@
 package Platform::Unix;
 $Platform::Unix::AUTHORITY = 'cpan:TOBYINK';
-$Platform::Unix::VERSION   = '0.000_01';
+$Platform::Unix::VERSION   = '0.000_02';
 $ENV{PERL_PLATFORM_OVERRIDE}||($^O =~ /^(Linux|.*BSD.*|.*UNIX.*|Darwin|Solaris|SunOS|Haiku|Next|dec_osf|svr4|sco_sv|unicos.*|.*x)$/i);
 
 __END__
@@ -16,6 +16,9 @@ Platform::Unix - an empty module that can only be installed on Linux/Unix
 =head1 DESCRIPTION
 
 This module does nothing, but its installer only works on Unix.
+The platform test is:
+
+ $^O =~ /^(Linux|.*BSD.*|.*UNIX.*|Darwin|Solaris|SunOS|Haiku|Next|dec_osf|svr4|sco_sv|unicos.*|.*x)$/i
 
 Adding a dependency on Platform::Unix is a way of explicitly
 indicating that your module requires Unix.

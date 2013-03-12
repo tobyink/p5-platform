@@ -60,6 +60,7 @@ sub make_all
 			%{ j($config_file) },
 		);
 		
+		$o{prettytest} ||= $o{test};
 		$o{test} = "\$ENV{PERL_PLATFORM_OVERRIDE}||($o{test})";
 		
 		make_dist(\%o);

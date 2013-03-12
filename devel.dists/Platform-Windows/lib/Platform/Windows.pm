@@ -1,6 +1,6 @@
 package Platform::Windows;
 $Platform::Windows::AUTHORITY = 'cpan:TOBYINK';
-$Platform::Windows::VERSION   = '0.000_01';
+$Platform::Windows::VERSION   = '0.000_02';
 $ENV{PERL_PLATFORM_OVERRIDE}||($^O =~ /^(MSWin32|cygwin)$/i);
 
 __END__
@@ -16,6 +16,9 @@ Platform::Windows - an empty module that can only be installed on Windows
 =head1 DESCRIPTION
 
 This module does nothing, but its installer only works on Windows.
+The platform test is:
+
+ $^O =~ /^(MSWin32|cygwin)$/i
 
 Adding a dependency on Platform::Windows is a way of explicitly
 indicating that your module requires Windows.
