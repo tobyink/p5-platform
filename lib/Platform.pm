@@ -62,7 +62,10 @@ L<http://rt.cpan.org/Dist/Display.html?Queue=Platform>.
 
 =head1 SEE ALSO
 
-L<Platform::Unix>, L<Platform::Windows>,
+L<Platform::Unix>, L<Platform::Windows>.
+
+L<http://blogs.perl.org/users/toby_inkster/2013/03/introducing-platform.html>.
+
 L<https://bitbucket.org/tobyink/p5-platform>.
 
 =head1 AUTHOR

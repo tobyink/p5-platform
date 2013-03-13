@@ -1,0 +1,63 @@
+=pod
+
+TITLE - Introducing Platform
+
+=head2 So, what's the big idea?
+
+Perl projects have all manner of ways of declaring their dependencies.
+CPAN releases usually include a file called META.yml or META.json
+listing their dependencies (though Makefile.PL or Build.PL is also
+supposed to generate a list of dependencies when it runs; this allows
+the release to dynamically decide on different dependencies based
+on the machine it's running on). Non-CPAN projects can declare their
+CPAN dependencies using L<Module::CPANfile|cpanfile> too.
+
+Once the dependencies are declared, this information is used by CPAN
+clients, by metacpan.org (to show the list of a release's dependencies),
+by L<http://deps.cpantesters.org/> and so on.
+
+However, this only works where you want to declare dependencies on
+CPAN modules, or on a minimum version of Perl itself.
+
+However, there's another few important types of dependency - your
+project may depend on external libraries or binaries, or may depend
+on a particular platform (e.g. code that only works, or only makes
+sense to use on Windows).
+
+For external libraries, there is good work going on in the Alien
+namespace on CPAN. And it seems reasonable to extend this approach
+to binaries.
+
+For platforms, the solution to this has often been to include code
+in Makefile.PL to check C<< $^O >> looks OK and die otherwise:
+
+	die "Windows only!" unless $^O eq 'MSWin32';
+
+However, this approach doesn't leave any indication of the required
+platform in META.yml; it's invisible to services performing automated
+analysis of CPAN; metacpan.org's dependency listings won't show it.
+
+The Platform namespace is designed as a solution to these issues.
+
+=head2 What is in the Platform namespace?
+
+Initially three releases. The first is L<Platform> itself - a
+documentation-only release explaining the concept.
+
+The next is L<Platform::Unix>. This is a module that doesn't "do"
+anything, but will only install and only run on Unix-like platforms.
+So if your Perl project requires a Unix-like OS, just add a
+dependency on Platform::Unix, and Bob's your uncle. Having
+Platform::Unix listed in your META.yml and on your metacpan.org
+page makes it really explicit to your users that your release
+requires a Unix-like operating system.
+
+The third release is L<Platform::Windows> which is much the same
+thing for Windows.
+
+=head2 Any more planned?
+
+No, but if you have any requests, let me know. I've got a template
+for building new Platform releases in
+L<the Platform repository|https://bitbucket.org/tobyink/p5-platform>.
+
