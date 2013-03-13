@@ -24,8 +24,9 @@ sub make_file
 	say "  $f1 => $f2";
 	
 	my $d = $f1->slurp;
-	$d =~ s{ Platform::Template }{ $o->{package} }gex;
-	$d =~ s{ \#@{[uc]}\#        }{ $o->{$_}      }gex for sort keys %$o;
+	$d =~ s{ Platform::Template }{ $o->{package}      }gex;
+	$d =~ s{ Platform-Template  }{ $o->{distribution} }gex;
+	$d =~ s{ \#@{[uc]}\#        }{ $o->{$_}           }gex for sort keys %$o;
 	$f2->parent->mkpath;
 	$f2->spew($d);
 }
