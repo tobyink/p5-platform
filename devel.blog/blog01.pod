@@ -10,7 +10,7 @@ listing their dependencies (though Makefile.PL or Build.PL is also
 supposed to generate a list of dependencies when it runs; this allows
 the release to dynamically decide on different dependencies based
 on the machine it's running on). Non-CPAN projects can declare their
-CPAN dependencies using L<Module::CPANfile|cpanfile> too.
+CPAN dependencies using L<cpanfile|Module::CPANfile> too.
 
 Once the dependencies are declared, this information is used by CPAN
 clients, by metacpan.org (to show the list of a release's dependencies),
