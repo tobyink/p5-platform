@@ -1,6 +1,6 @@
 package Platform::Windows;
 $Platform::Windows::AUTHORITY = 'cpan:TOBYINK';
-$Platform::Windows::VERSION   = '0.000_02';
+$Platform::Windows::VERSION   = '0.001';
 $ENV{PERL_PLATFORM_OVERRIDE}||($^O =~ /^(MSWin32|cygwin)$/i);
 
 __END__
