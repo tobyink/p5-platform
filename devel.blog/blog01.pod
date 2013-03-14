@@ -31,7 +31,7 @@ to binaries.
 For platforms, the solution to this has often been to include code
 in Makefile.PL to check C<< $^O >> looks OK and die otherwise:
 
-	die "Windows only!" unless $^O eq 'MSWin32';
+	die "Windows only!" unless $^O eq "MSWin32";
 
 However, this approach doesn't leave any indication of the required
 platform in META.yml; it's invisible to services performing automated
