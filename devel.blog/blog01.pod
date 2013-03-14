@@ -19,7 +19,7 @@ by L<http://deps.cpantesters.org/> and so on.
 However, this only works where you want to declare dependencies on
 CPAN modules, or on a minimum version of Perl itself.
 
-However, there's another few important types of dependency - your
+There's another few important types of dependency - your
 project may depend on external libraries or binaries, or may depend
 on a particular platform (e.g. code that only works, or only makes
 sense to use on Windows).
