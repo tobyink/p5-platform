@@ -1,8 +1,11 @@
 use 5;
 use ExtUtils::MakeMaker;
 
-die "Requires Windows!\n"
-	unless $ENV{PERL_PLATFORM_OVERRIDE}||($^O =~ /^(MSWin32|cygwin)$/i);
+unless ($ENV{PERL_PLATFORM_OVERRIDE}||($^O =~ /^(MSWin32|cygwin)$/i))
+{
+	warn "Requires Windows!\n";
+	die "No support for OS.\n";
+}
 
 WriteMakefile(
 	NAME              => 'Platform::Windows',
@@ -16,7 +19,7 @@ WriteMakefile(
 			license     => 'http://dev.perl.org/licenses/',
 			homepage    => 'https://metacpan.org/release/Platform-Windows',
 			bugtracker  => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Platform-Windows',
-			repository  => 'https://bitbucket.org/tobyink/p5-platform',
+			repository  => 'https://github.com/tobyink/p5-platform',
 		},
 	},
 );
