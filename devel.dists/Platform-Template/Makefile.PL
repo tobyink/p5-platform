@@ -1,8 +1,11 @@
 use 5;
 use ExtUtils::MakeMaker;
 
-die "Requires #PLATFORM#!\n"
-	unless #TEST#;
+unless (#TEST#)
+{
+	warn "Requires #PLATFORM#!\n";
+	die "No support for OS.\n";
+}
 
 WriteMakefile(
 	NAME              => 'Platform::Template',
@@ -16,7 +19,7 @@ WriteMakefile(
 			license     => 'http://dev.perl.org/licenses/',
 			homepage    => 'https://metacpan.org/release/Platform-Template',
 			bugtracker  => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Platform-Template',
-			repository  => 'https://bitbucket.org/tobyink/p5-platform',
+			repository  => 'https://github.com/tobyink/p5-platform',
 		},
 	},
 );
