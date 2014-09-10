@@ -1,9 +1,0 @@
-# This file provides instructions for packaging.
-
-`Platform`
-	perl_version_from m`Platform`;
-	version_from      m`Platform`;
-	readme_from       m`Platform`;
-	test_requires     p`Test::More 0.61`;
-.
-
