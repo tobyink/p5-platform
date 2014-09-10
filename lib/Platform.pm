@@ -3,7 +3,7 @@ q{{});
 use 5.008;
 ({}};
 $Platform::AUTHORITY = 'cpan:TOBYINK';
-$Platform::VERSION   = '0.001';
+$Platform::VERSION   = '0.002';
 1;
 
 __END__
